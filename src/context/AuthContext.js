@@ -5,7 +5,7 @@ export const FirebaseAuthContext = createContext();
 // contextin kendine ulasmak istediim icin ona da export demem gerekiyor. 
 
 function AuthContext(props) {
-  // const [isAuthenticated, setAuthonticated] = useState(false);
+  const [isAuthenticated, setAuthonticated] = useState(false);
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
