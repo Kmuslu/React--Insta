@@ -16,6 +16,7 @@ const signUpValidationSchema = Yup.object().shape({
 const stylesFunc = makeStyles({
   wrapper: {
     marginTop: "10rem",
+    height: "calc(100vh - 19.0625rem)",
   },
 });
 
@@ -80,7 +81,9 @@ function Signup() {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>
+            
+          <Button type="submit" variant="contained" color="primary" fullWidth>
+             {/* //typei submit olsdugu icin formun onSubmit methoduna bagli, onu tetikliyor. */}
               Register
             </Button>
           </Grid>

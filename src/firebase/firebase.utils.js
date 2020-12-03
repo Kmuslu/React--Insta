@@ -1,5 +1,3 @@
-
-
 import firebase from "firebase/app";
 import "firebase/auth"
 
@@ -26,14 +24,12 @@ class Firebase {
 
   // register registerWithEmailAndPassword
   async register(displayName, email, password) {
-    try {
+  
       await this.firebaseAuth.createUserWithEmailAndPassword(email, password);
       this.firebaseAuth.currentUser.updateProfile({
         displayName,
       });
-    } catch (err) {
-      console.log("F. Error:", err);
-    }
+    
   }
 
   // sign in/up with google GoogleAuthProvider
@@ -44,8 +40,9 @@ class Firebase {
   }
 
   // login  signInWithEmailAndPassword
-  signIn(email, password) {
+  signIn(displayName, email, password) {
     this.firebaseAuth.signInWithEmailAndPassword(email, password);
+    
   }
 
   // logout signOut

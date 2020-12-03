@@ -2,9 +2,10 @@ import { createContext, useState, useEffect } from "react";
 import firebase from "../firebase/firebase.utils";
 
 export const FirebaseAuthContext = createContext();
+// contextin kendine ulasmak istediim icin ona da export demem gerekiyor. 
 
-function AuthContextProvider(props) {
-  const [isAuthenticated, setAuthonticated] = useState(false);
+function AuthContext(props) {
+  // const [isAuthenticated, setAuthonticated] = useState(false);
   const [currentUser, setCurrentUser] = useState();
 
   useEffect(() => {
@@ -21,4 +22,4 @@ function AuthContextProvider(props) {
   );
 }
 
-export default AuthContextProvider;
+export default AuthContext;
